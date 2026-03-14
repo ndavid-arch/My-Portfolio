@@ -1,0 +1,163 @@
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        height: auto;
+    }
+
+    section {
+        height: auto;
+        margin: 0 5rem;
+        padding-top: 6vh;
+    }
+
+    #profile,
+    #about .section-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #profile {
+        gap: 2rem;
+    }
+
+    .section_pic-container {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    #about .section_pic-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .about-details-container {
+        width: 100%;
+    }
+
+    #about .about-containers,
+    #experience .about-containers,
+    #projects .about-containers {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #experience .details-container,
+    #projects .details-container {
+        flex: 1 1 18rem;
+    }
+
+    .experience-details-container {
+        gap: 2rem;
+    }
+
+    .article-container {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    footer nav {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        margin: 0 1.5rem;
+        padding-top: 4vh;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    #hamburger-nav {
+        padding: 1rem 1.25rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .section_text_p2,
+    .experience-sub-title {
+        font-size: 1.25rem;
+    }
+
+    .section_pic-container,
+    #about .section_pic-container {
+        width: 260px;
+        height: 260px;
+    }
+
+    .btn-container {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 16rem;
+    }
+
+    #about .about-containers,
+    #experience .about-containers,
+    #projects .about-containers,
+    .contact-info-upper-container,
+    footer .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-container,
+    #experience .details-container,
+    #projects .details-container {
+        width: 100%;
+        max-width: 22rem;
+    }
+
+    .article-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    article {
+        width: 100%;
+        max-width: 16rem;
+    }
+
+    .project-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-info-upper-container {
+        padding: 1rem;
+    }
+
+    .contact-info-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer {
+        height: auto;
+        padding: 2rem 0;
+    }
+
+    footer .nav-links {
+        gap: 1rem;
+        font-size: 1.1rem;
+    }
+}
