@@ -1,4 +1,8 @@
 @media screen and (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
+
     #desktop-nav {
         display: none;
     }
@@ -13,7 +17,11 @@
 
     section {
         height: auto;
-        margin: 0 5rem;
+        width: min(100%, 1100px);
+        margin: 0 auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        box-sizing: border-box;
         padding-top: 6vh;
     }
 
@@ -40,6 +48,7 @@
 
     .about-details-container {
         width: 100%;
+        box-sizing: border-box;
     }
 
     #about .about-containers,
@@ -52,6 +61,7 @@
     #experience .details-container,
     #projects .details-container {
         flex: 1 1 18rem;
+        box-sizing: border-box;
     }
 
     .experience-details-container {
@@ -74,7 +84,11 @@
 
 @media screen and (max-width: 768px) {
     section {
-        margin: 0 1.5rem;
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
         padding-top: 4vh;
     }
 
@@ -124,6 +138,9 @@
     #projects .details-container {
         width: 100%;
         max-width: 22rem;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
     }
 
     .article-container {
@@ -143,7 +160,12 @@
     }
 
     .contact-info-upper-container {
+        width: 100%;
+        max-width: 22rem;
         padding: 1rem;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .contact-info-container {
