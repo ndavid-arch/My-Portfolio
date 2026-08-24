@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="Python fundamentals team project">
+  <rect width="500" height="500" rx="48" fill="#f2f4f7"/>
+  <rect x="66" y="96" width="368" height="248" rx="24" fill="#ffffff" stroke="#dde1e7" stroke-width="3"/>
+  <rect x="66" y="96" width="368" height="46" rx="24" fill="#353535"/>
+  <rect x="66" y="126" width="368" height="16" fill="#353535"/>
+  <g fill="#ffffff" opacity="0.85">
+    <circle cx="98" cy="119" r="8"/><circle cx="126" cy="119" r="8"/><circle cx="154" cy="119" r="8"/>
+  </g>
+  <g font-family="JetBrains Mono, Consolas, monospace" font-size="25" fill="#4b5563">
+    <text x="100" y="196">&gt; name: <tspan fill="#2d5be3" font-weight="600">Beni</tspan></text>
+    <text x="100" y="246" fill="#2d5be3" font-weight="600">01000010 01100101</text>
+    <text x="100" y="292" fill="#2d5be3" font-weight="600">01101110 01101001</text>
+  </g>
+  <text x="250" y="416" text-anchor="middle" font-family="Poppins, Segoe UI, sans-serif" font-size="32" font-weight="600" fill="#353535">Python Fundamentals</text>
+  <text x="250" y="450" text-anchor="middle" font-family="Poppins, Segoe UI, sans-serif" font-size="20" fill="#8b919b">Team modular build</text>
+</svg>

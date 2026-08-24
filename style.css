@@ -448,3 +448,234 @@ footer {
 footer p {
     text-align: center;
 }
+/* PROJECT CARDS */
+
+.projects-hint {
+    text-align: center;
+    color: rgb(120, 120, 120);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Keep every card a third of the row wide, so a row of two matches a row
+   of three instead of stretching to fill the space. min-width: 0 is what
+   lets the basis win — without it a card can never shrink below the width
+   of its three buttons sitting on one line. */
+#projects .details-container,
+#experience .details-container {
+    flex: 0 1 calc((100% - 4rem) / 3);
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Cards are a third of the row, so three full-width buttons don't fit on
+   one line — let them wrap instead of stretching the card. */
+#projects .btn-container {
+    flex-wrap: wrap;
+}
+
+.project-card {
+    cursor: pointer;
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-0.35rem);
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.09);
+    border-color: rgb(53, 53, 53);
+}
+
+.project-img {
+    object-fit: cover;
+}
+
+/* PROJECT MODAL */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.project-modal[hidden] {
+    display: none;
+}
+
+.project-modal_backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.55);
+}
+
+.project-modal_dialog {
+    position: relative;
+    background: white;
+    border: rgb(163, 163, 163) 0.1rem solid;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    width: min(46rem, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+    animation: project-modal-in 250ms ease;
+}
+
+@keyframes project-modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-modal_close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: rgb(85, 85, 85);
+    cursor: pointer;
+    transition: color 300ms ease;
+}
+
+.project-modal_close:hover {
+    color: black;
+}
+
+.project-modal_eyebrow {
+    font-weight: 600;
+    color: rgb(120, 120, 120);
+    margin-bottom: 0.35rem;
+    padding-right: 2.5rem;
+}
+
+.project-modal_title {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 1rem;
+    padding-right: 2.5rem;
+}
+
+.project-modal_meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    list-style: none;
+    margin-bottom: 1.5rem;
+    color: rgb(85, 85, 85);
+}
+
+.project-modal_meta li {
+    position: relative;
+}
+
+.project-modal_meta li:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: -0.7rem;
+    top: 50%;
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 50%;
+    background: rgb(163, 163, 163);
+    transform: translateY(-50%);
+}
+
+.project-modal_summary {
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+}
+
+.project-modal_heading {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 0.75rem;
+}
+
+.project-modal_list {
+    list-style: none;
+    margin-bottom: 1.75rem;
+}
+
+.project-modal_list li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: rgb(85, 85, 85);
+    line-height: 1.55;
+}
+
+.project-modal_list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: rgb(53, 53, 53);
+}
+
+.project-modal_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.project-tag {
+    background: rgb(250, 250, 250);
+    border: rgb(163, 163, 163) 0.1rem solid;
+    border-radius: 2rem;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.9rem;
+    color: rgb(53, 53, 53);
+}
+
+.project-modal_links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.project-modal_links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: rgb(250, 250, 250);
+    text-decoration: none;
+}
+
+.project-modal_links a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .project-card:hover,
+    .project-modal_dialog {
+        transition: none;
+        transform: none;
+        animation: none;
+    }
+}

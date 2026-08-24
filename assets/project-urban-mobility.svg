@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="Urban Mobility Data Explorer">
+  <rect width="500" height="500" rx="48" fill="#f6f5f2"/>
+  <g stroke="#e4e0d8" stroke-width="3">
+    <path d="M70 120 H430 M70 190 H430 M70 260 H430 M70 330 H430"/>
+    <path d="M130 80 V350 M210 80 V350 M290 80 V350 M370 80 V350"/>
+  </g>
+  <g fill="#353535">
+    <rect x="98" y="248" width="42" height="102" rx="10"/>
+    <rect x="162" y="196" width="42" height="154" rx="10"/>
+    <rect x="290" y="216" width="42" height="134" rx="10"/>
+    <rect x="354" y="272" width="42" height="78" rx="10"/>
+  </g>
+  <rect x="226" y="132" width="42" height="218" rx="10" fill="#f2a53a"/>
+  <circle cx="247" cy="104" r="15" fill="#f2a53a"/>
+  <text x="250" y="416" text-anchor="middle" font-family="Poppins, Segoe UI, sans-serif" font-size="34" font-weight="600" fill="#353535">Urban Mobility</text>
+  <text x="250" y="450" text-anchor="middle" font-family="Poppins, Segoe UI, sans-serif" font-size="20" fill="#8f8a80">7.3M NYC taxi trips</text>
+</svg>

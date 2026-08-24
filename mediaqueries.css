@@ -183,3 +183,62 @@
         font-size: 1.1rem;
     }
 }
+@media screen and (max-width: 1200px) {
+    /* Two cards per row here. Without this a card that wraps on its own
+       stretches to fill the whole row and dwarfs the others. */
+    #projects .details-container,
+    #experience .details-container {
+        flex: 0 1 calc((100% - 2rem) / 2);
+        min-width: 0;
+    }
+
+    .project-modal_dialog {
+        padding: 2rem;
+        max-height: 88vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projects-hint {
+        font-size: 0.95rem;
+    }
+
+    .project-modal {
+        padding: 1rem 0.75rem;
+    }
+
+    .project-modal_dialog {
+        padding: 1.75rem 1.25rem;
+        border-radius: 1.5rem;
+        max-height: 90vh;
+    }
+
+    .project-modal_title {
+        font-size: 1.6rem;
+    }
+
+    /* The meta line wraps on a narrow screen, which would leave a
+       separator dot stranded at the start of the new line. */
+    .project-modal_meta {
+        gap: 0.25rem 1rem;
+    }
+
+    .project-modal_meta li:not(:first-child)::before {
+        display: none;
+    }
+
+    .project-modal_close {
+        top: 0.9rem;
+        right: 1rem;
+    }
+
+    .project-modal_links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-modal_links a {
+        width: 100%;
+        max-width: 16rem;
+    }
+}
